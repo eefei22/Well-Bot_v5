@@ -12,7 +12,7 @@ class Wav2VecEmotionRecognizer:
         self.model.to(self.device)
         self.model.eval()
 
-        # Load label mapping from config.json (e.g. {'0': 'neu', '1': 'hap', ...})
+        # Load label mapping from config.json 
         self.label_map = self.model.config.id2label
 
         # Normalize short labels to full emotion names

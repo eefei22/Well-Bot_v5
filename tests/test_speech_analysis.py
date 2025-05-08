@@ -6,28 +6,36 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from speech_processing.wav2vec_emotion import Wav2VecEmotionRecognizer
 from speech_processing.wav2vec_transcription import Wav2VecTranscriber
+from speech_processing.wav2vec_sentiment import Wav2VecSentimentAnalyzer
 
 def main():
     # Choose the file to test
-    test_file = "data/audio_samples/speech_tester3.wav"
-    print(f"Processing file: {test_file}")
+    test_file = "data/audio_samples/speech_tester2.wav"
+    print(f"🎧 Processing file: {test_file}")
 
     # Initialize modules
     recognizer = Wav2VecEmotionRecognizer()
     transcriber = Wav2VecTranscriber()
+    sentiment_analyzer = Wav2VecSentimentAnalyzer()
 
-    # Emotion analysis
+    # Run transcription
+    transcription_result = transcriber.transcribe(test_file)
+    transcript = transcription_result["transcript"]
+
+    # Run emotion recognition
     emotion_result = recognizer.predict_emotion(test_file)
 
-    # Transcription
-    transcription_result = transcriber.transcribe(test_file)
+    # Run sentiment analysis on the transcript
+    sentiment_result = sentiment_analyzer.analyze(transcript)
 
-    # Print results
+    # Print all results
     print("\n=== Speech Analysis ===")
-    print("Transcript       :", transcription_result["transcript"])
-    print("Predicted Emotion:", emotion_result["predicted_label"])
-    print("Confidence       :", emotion_result["confidence"])
+    print("Transcript       :", transcript)
+    print("Emotion          :", emotion_result["predicted_label"])
+    print("Emotion Confidence:", emotion_result["confidence"])
     print("Emotion Scores   :", emotion_result["probabilities"])
+    print("Sentiment        :", sentiment_result["sentiment"])
+    print("Sentiment Score  :", sentiment_result["score"])
 
 if __name__ == "__main__":
     main()
