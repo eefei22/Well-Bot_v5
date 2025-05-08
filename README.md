@@ -1,4 +1,11 @@
-# Well-Bot_v5 Project
+# Well-Bot_v5 - Multimodal AI Assistant
+
+## Project Overview
+A comprehensive AI assistant combining:
+- Speech processing (emotion, sentiment, transcription)
+- Dialogue generation with WizardLM2
+- Text-to-speech capabilities
+- Audio sample analysis
 
 ## Directory Structure
 
@@ -8,11 +15,13 @@
 ├── requirements.txt
 ├── data/
 │   └── audio_samples/
-│       ├── speech_tester4.wav
 │       ├── speech_tester.wav
 │       ├── speech_tester2.wav
-│       └── speech_tester3.wav
+│       ├── speech_tester3.wav
+│       └── speech_tester4.wav
 ├── dialogue_generator/
+│   ├── response_db.py
+│   └── wizardllm_handler.py
 ├── main_controller/
 ├── models/
 │   ├── download_models.py
@@ -27,10 +36,13 @@
 ├── tests/
 │   └── test_speech_analysis.py
 └── utilities_scripts/
+    └── text_to_speech.py
 ```
 
-Project Description
-(Add detailed description here...)
+## Key Components
+- **Speech Processing**: Emotion detection, sentiment analysis, and transcription
+- **Dialogue System**: WizardLM2 integration with response database
+- **Audio Pipeline**: End-to-end processing from speech input to generated response
 
 ---
 
