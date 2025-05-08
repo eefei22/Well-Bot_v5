@@ -2,3 +2,4 @@ transformers
 torchaudio
 torch
 soundfile
+pyttsx3

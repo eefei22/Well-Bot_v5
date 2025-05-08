@@ -8,10 +8,11 @@
 ├── requirements.txt
 ├── data/
 │   └── audio_samples/
+│       ├── speech_tester4.wav
 │       ├── speech_tester.wav
 │       ├── speech_tester2.wav
 │       └── speech_tester3.wav
-├── dialogue_generate/
+├── dialogue_generator/
 ├── main_controller/
 ├── models/
 │   ├── download_models.py
@@ -19,11 +20,12 @@
 │       ├── config.json
 │       ├── model.safetensors
 │       └── preprocessor_config.json
-├── speech_processing/
+├── speech_processor/
 │   ├── wav2vec_emotion.py
+│   ├── wav2vec_sentiment.py
 │   └── wav2vec_transcription.py
 ├── tests/
-│   └── test_emotion.py
+│   └── test_speech_analysis.py
 └── utilities_scripts/
 ```
 
@@ -53,13 +55,34 @@ Project Description
 
 ---
 
+## 🤖 Ollama & WizardLM2 Setup
+This project requires Ollama for running the WizardLM2 language model locally.
+
+### Installing Ollama (Windows)
+1. Download the installer from [ollama.ai](https://ollama.ai)
+2. Run the downloaded .exe file
+3. Open a new terminal/PowerShell window after installation
+
+### Pulling the WizardLM2 Model
+Run this command to download the model:
+```
+ollama pull wizardlm2
+```
+
+Verify it works by running:
+```
+ollama run wizardlm2 "Hello"
+```
+
+---
+
 ## 🚫 GitHub Best Practice
 Do **not** upload the contents of `models/ser/` to GitHub. These files are large and should remain local. They are already ignored via `.gitignore`.
 
 ---
-## 🧪 Running the Emotion Test Script
-You can test speech emotion recognition using:
+## 🧪 Running the Speech Analysis Test
+You can test speech processing using:
 ```
-python tests/test_emotion.py
+python tests/test_speech_analysis.py
 ```
 Make sure your .wav files are in data/audio_samples/.
