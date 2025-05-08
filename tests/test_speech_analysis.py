@@ -4,13 +4,13 @@ import os
 # Ensure parent directory is in sys.path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from speech_processing.wav2vec_emotion import Wav2VecEmotionRecognizer
-from speech_processing.wav2vec_transcription import Wav2VecTranscriber
-from speech_processing.wav2vec_sentiment import Wav2VecSentimentAnalyzer
+from speech_processor.wav2vec_emotion import Wav2VecEmotionRecognizer
+from speech_processor.wav2vec_transcription import Wav2VecTranscriber
+from speech_processor.wav2vec_sentiment import Wav2VecSentimentAnalyzer
 
 def main():
     # Choose the file to test
-    test_file = "data/audio_samples/speech_tester2.wav"
+    test_file = "data/audio_samples/Speech Testing (a).wav"
     print(f"🎧 Processing file: {test_file}")
 
     # Initialize modules
