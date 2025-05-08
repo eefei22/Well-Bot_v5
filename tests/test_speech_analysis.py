@@ -8,10 +8,11 @@ from speech_processor.wav2vec_emotion import Wav2VecEmotionRecognizer
 from speech_processor.wav2vec_transcription import Wav2VecTranscriber
 from speech_processor.wav2vec_sentiment import Wav2VecSentimentAnalyzer
 from dialogue_generator.wizardllm_handler import WizardDialogueEngine
+from utilities_scripts.text_to_speech import speak_text
 
 def main():
     # Choose the file to test
-    test_file = "data/audio_samples/speech_tester2.wav"
+    test_file = "data/audio_samples/speech_tester3.wav"
     print(f"🎧 Processing file: {test_file}")
 
     # Initialize modules
@@ -47,6 +48,7 @@ def main():
 
     print("\n=== WizardLM Response ===")
     print(wizard_response)
+    speak_text(wizard_response)
 
 if __name__ == "__main__":
     main()
