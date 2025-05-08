@@ -1,0 +1,45 @@
+# ------------------------------
+# Python & Environment Defaults
+# ------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.log
+*.tmp
+*.bak
+.DS_Store
+.env
+.venv/
+venv/
+ENV/
+*.sqlite3
+
+# ------------------------------
+# Model Checkpoints (general)
+# ------------------------------
+*.bin
+*.ckpt
+*.h5
+*.pt
+*.safetensors
+
+# ------------------------------
+# Hugging Face and Torch Caches
+# ------------------------------
+~/.cache/huggingface/
+~/.torch/
+
+# ------------------------------
+# Models Folder (Local Only)
+# ------------------------------
+models/ser/*
+!models/ser/.gitkeep
+
+# Optional: Ignore download script cache if any
+models/downloaded/
+
+# ------------------------------
+# VSCode or PyCharm Configs
+# ------------------------------
+.vscode/
+.idea/

@@ -1,0 +1,1 @@
+# wav2vec_transcription.py for STT with Wav2Vec2ForCTC
