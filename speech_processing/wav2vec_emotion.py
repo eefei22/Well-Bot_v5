@@ -53,9 +53,9 @@ class Wav2VecEmotionRecognizer:
         normalized_label = self.label_normalizer[predicted_label]
 
         # Optional: print
-        print("🧠 Emotion Probabilities:")
-        for label, score in prob_dict.items():
-            print(f"  {label.capitalize():<10}: {score:.4f}")
+        #print("Emotion Probabilities:")
+        #for label, score in prob_dict.items():
+        #    print(f"  {label.capitalize():<10}: {score:.4f}")
 
         return {
             "predicted_label": normalized_label,
