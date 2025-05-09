@@ -41,9 +41,8 @@ A comprehensive AI assistant combining:
 Project Description
 (Add detailed description here...)
 
----
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 1. **Create and activate a virtual environment**
     ```
@@ -57,14 +56,21 @@ Project Description
     ```
 
 3. **Download emotion classification model**
+
     This project uses a local Wav2Vec2 model for speech emotion recognition. Run the following to download it:
     ```
     python models/download_models.py
     ```
+4. **Running the Speech Analysis Test**
 
----
+    You can test speech processing using:
+    ```
+    python tests/test_speech_analysis.py
+    ```
+    Make sure your .wav files are in data/audio_samples/.
 
-## 🤖 Ollama & WizardLM2 Setup
+
+## Ollama & WizardLM2 Setup
 This project requires Ollama for running the WizardLM2 language model locally.
 
 ### Installing Ollama (Windows)
@@ -83,15 +89,8 @@ Verify it works by running:
 ollama run wizardlm2 "Hello"
 ```
 
----
-
-## 🚫 GitHub Best Practice
+## .gitignore
 Do **not** upload the contents of `models/ser/` to GitHub. These files are large and should remain local. They are already ignored via `.gitignore`.
 
 ---
-## 🧪 Running the Speech Analysis Test
-You can test speech processing using:
-```
-python tests/test_speech_analysis.py
-```
-Make sure your .wav files are in data/audio_samples/.
+
