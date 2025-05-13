@@ -46,7 +46,7 @@ A comprehensive AI assistant combining:
 
 ---
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 1. **Create and activate a virtual environment**
     ```
@@ -67,7 +67,7 @@ A comprehensive AI assistant combining:
 
 ---
 
-## 🤖 Ollama & WizardLM2 Setup
+## Ollama & WizardLM2 Setup
 This project requires Ollama for running the WizardLM2 language model locally.
 
 ### Installing Ollama (Windows)
@@ -88,11 +88,11 @@ ollama run wizardlm2 "Hello"
 
 ---
 
-## 🚫 GitHub Best Practice
+## GitHub Best Practice
 Do **not** upload the contents of `models/ser/` to GitHub. These files are large and should remain local. They are already ignored via `.gitignore`.
 
 ---
-## 🧪 Running the Speech Analysis Test
+## Running the Speech Analysis Test
 You can test speech processing using:
 ```
 python tests/test_speech_analysis.py
